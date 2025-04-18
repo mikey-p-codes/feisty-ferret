@@ -2,7 +2,7 @@ import os
 from flask import Flask, render_template, request, redirect, url_for, flash
 from werkzeug.utils import secure_filename
 
-UPLOAD_FOLDER = '/var/www/uploads'
+UPLOAD_FOLDER = '/var/www/html/uploads'
 ALLOWED_EXTENSIONS = {'txt', 'php'}
 
 app = Flask(__name__)

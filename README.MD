@@ -13,6 +13,15 @@ To host the vulnerable application, a standard Ubuntu server environment is conf
 sudo apt update
 sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools python3-venv nginx
 ```
+
+- We will also need to set the proper permissions for our web app.
+
+```bash
+sudo usermod -aG www-data valette
+# change the folder permissions to ensure maximum insecurity
+sudo chmod 775 /var/www/html/uploads/
+```
+
 ### 1.1.2 **Python VENV**:
 - To isolate dependencies, we will create a virtual environment within this cloned github project. (ex. ```/home/valette/feisty-ferret```):
 ```bash

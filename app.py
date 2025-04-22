@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.config = UPLOAD_FOLDER
 app.secret = '313374@x0r'
 
-@app.route('/', methods=)
+@app.route('/', methods=['GET', 'POST'])
 def upload_files():
     if request.method == 'POST':
         if 'file' not in request.files:

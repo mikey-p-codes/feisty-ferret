@@ -35,13 +35,13 @@ RUN echo 'valette ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/valette-nopasswd && 
 WORKDIR /app
 
 # Copy the requirements file into the container
-COPY requirements.txt
+COPY requirements.txt /app/
 
 # Install Python dependencies
 RUN pip3 install --no-cache-dir -r requirements.txt
 
 # Copy the Flask application code into the container
-COPY app.py
+COPY app.py /app/
 
 # Create the insecure upload directory and set permissions
 # Note: This path matches UPLOAD_FOLDER in app.py

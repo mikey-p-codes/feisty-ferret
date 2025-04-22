@@ -13,7 +13,7 @@ app.secret_key = '313374@x0r'  # Hardcoded secret for demonstration purposes
 # Helper function to check allowed file extensions
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-@app.route('/index.html')
+@app.route('/index.html',methods=['GET'])
 def index():
     return render_template('index.html')
 

@@ -1,0 +1,20 @@
+Create bash or python script to automate the following
+    [+]nmap
+    [+]gobuster for dev discovery
+    [+]Compromise machine through web based php shell
+    [+]download medusa to /dev/shm
+
+Create TOML file to completely automate owning of HTB Bashed machine.  Seems like an easy use case.
+    [+] print user.txt
+    [+] cat /etc/passwd
+    [+] sudo -l
+    [+] sudo scriptmanager bash -p # maybe don't need the privilege hold but why not
+    [+] rename script being used for root check
+    [+] upload new python script that will download second medusa payload and execute at /dev/shm/tmp/medusa.py
+    [+] revert script to original script for opsec (on low privilege user)
+    [+] under root payload cat root.txt
+    [+] issue reboot command to clear /dev/shm
+
+
+
+

@@ -5,7 +5,8 @@ from werkzeug.utils import secure_filename
 # Configuration
 UPLOAD_FOLDER = '/var/www/html/uploads'
 ALLOWED_EXTENSIONS = {'txt', 'php'}
-
+# in your server run chmod -R 777 /var/www/html/uploads to make it writable by the web server
+# Note: This is intentionally insecure for demonstration purposes. In a production environment, you should use more secure methods.
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.secret_key = '313374@x0r'  # Hardcoded secret for demonstration purposes

@@ -56,6 +56,7 @@ def upload_files():
         except Exception as e:
             flash(f'Error uploading file: {e}')
             return redirect(request.url)
+    return redirect(url_for('index'))
 
 @app.route('/uploads/<name>')
 def download_file(name):

@@ -13,9 +13,9 @@ app.secret_key = '313374@x0r'  # Hardcoded secret for demonstration purposes
 # Helper function to check allowed file extensions
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-@app.route('/index.html',methods=['GET'])
+@app.route('/index.html',methods=['GET', 'POST'])
 def index():
-        if request.method == 'POST':
+    if request.method == 'POST':
         # Check if the 'file' part is in the request
         if 'file' not in request.files:
             flash('No file part in the request')

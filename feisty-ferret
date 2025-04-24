@@ -2,10 +2,12 @@
 Description=Gunicorn instance to serve LFI Vulnerable Flask app
 After=network.target
 
-User=kelsier
+
+[Service]
+User=valette
 Group=www-data
-WorkingDirectory=/home/kelsier/feisty-ferret/venv/bin
-ExecStart=/home/kelsier/feisty-ferret/venv/bin/gunicron3 --workers 3 --bind unix:/home/kelsier/fiesty-ferret/feisty-ferret.sock wsgi:app
+WorkingDirectory=/home/valette/feisty-ferret/
+ExecStart=/home/valette/feisty-ferret/feisty-ferret/bin/gunicorn --workers 3 --bind unix:/home/valette/feisty-ferret/feisty-ferret.sock wsgi:app
 
 [Install]
 WantedBy=multi-user.target

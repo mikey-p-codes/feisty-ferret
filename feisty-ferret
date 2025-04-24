@@ -5,7 +5,7 @@ After=network.target
 User=kelsier
 Group=www-data
 WorkingDirectory=/home/kelsier/feisty-ferret/venv/bin
-ExecStart=/home/kelsier/feisty-ferret/venv/bin/gunicron --workers 3 --bind unix:/home/kelsier/fiesty-ferret/feisty-ferret.sock wsgi:app
+ExecStart=/home/kelsier/feisty-ferret/venv/bin/gunicron3 --workers 3 --bind unix:/home/kelsier/fiesty-ferret/feisty-ferret.sock wsgi:app
 
 [Install]
 WantedBy=multi-user.target

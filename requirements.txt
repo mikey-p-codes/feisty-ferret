@@ -1,7 +1,5 @@
 Flask==2.3.2
-<<<<<<< HEAD
 Werkzeug==2.3.3
 gunicorn==20.1.0
-=======
-Werkzeug==2.3.2
->>>>>>> 65e1bd48254b3e0ebbd8b01b6a99f934f1615b99
+
+
